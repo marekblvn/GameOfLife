@@ -1,26 +1,30 @@
 # Conway's Game of Life
 
-## What is Game of Life?
-[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is a cellular automation created by J.H. Conway in 1970.
-The evolution is defined only by the game's initial state.\
-I chose to develop it in Windows Forms using C#, because it offers an easy UI interaction.
+## What is Conway's Game of Life?
 
-## Rules of the game
-The board is a two-dimensional space filled by square cells (16px by 16px in this implementation), each of which is in one of
-two possible states - dead or alive.\
-Every cell interacts with its 8 neighbours (horizontally, vertically and diagonally adjacent cells). At each step in time,
- the next state of each cell is defined by 4 rules:
- 1. Any live cell with fewer than two live neighbours dies. *(Underpopulation)*
- 2. Any live cell with two or three live neighbours remains alive. *(Next generation)*
- 3. Any live cell with more than three live neighbours dies. *(Overpopulation)*
- 4. Any dead cell with exactly three live neighbours becomes alive. *(Reproduction)*
-By applying these rules, new generations of cells are created.
+[Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) is a cellular automat created by **J.H. Conway** in 1970. The evolution of the universe is determined by its initial state.
 
-## The settings
-The max size of the board is 100 cells by 65 cells. Ticks indicate how fast the transition happens (higher tick means longer delay between
-current generation and the next).
-- Cells are set to alive by clicking on them (live cells are black, dead are white).
-- Hover mode is entered and exited by pressing H. The user can then move mouse across the board and "paint" the cells.
-- The simulation start when Enter key is pressed. When the Enter key is pressed during simulation, the simulation is paused. 
-During this time, it is possible to make changes to the current state of the board.
-- R key resets all cells in paused mode.
+## Rules
+
+The universe is a two-dimensional orthogonal grid filled with square cells, each of which is in one of two possible states, _live_ or _dead_. Every cell interacts with its eight neighbours (horizontally, vertically and diagonally adjacent). At each step in time, the next state of each cell is determined by these 4 rules:
+
+1. Any live cell with less than two live neighbours dies. (_Underpopulation_)
+2. Any live cell with two or three live neighbours remains live. (_Next generation_)
+3. Any live cell with more than three live neighbours dies. (_Overpopulation_)
+4. Any dead cell with exactly three live neighbours becomes a live cell. (_Reproduction_)
+
+## The Controls
+
+- Dead cells become live ones by **clicking** on them while the simulation is not running.
+- Pressing **H key** turns on the **"hover mode"**. During this mode you can simply move the mouse over the dead cells you want to turn to live cells.
+- Once you are ready to **start the simulation**, press **Enter key**. If the Enter key is pressed again, the **simulation is paused**.
+- In paused mode, you can **reset the cells** (to all dead) by pressing the **R key**.
+- The board **window is terminated** by pressing the **Escape key**.
+
+## The Settings
+
+The max size of the board is 100 cells by 65 cells. Tick indicated the delay between two generations (the highed the Tick, the more time you have to observe the current state of the board). The max Tick value is 1 second.
+\
+\
+\
+_made by_ Marek Balvín, 2021
