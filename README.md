@@ -24,6 +24,9 @@ The universe is a two-dimensional orthogonal grid filled with square cells, each
 ## The Settings
 
 The max size of the board is 100 cells by 65 cells. Tick indicated the delay between two generations (the highed the Tick, the more time you have to observe the current state of the board). The max Tick value is 1 second.
+
+## How to start the game?
+To start the game, download Release folder and run the executable.
 \
 \
 \
